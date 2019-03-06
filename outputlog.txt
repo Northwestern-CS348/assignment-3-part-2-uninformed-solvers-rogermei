@@ -1,0 +1,47 @@
+TESTS WITH ERRORS 
+test14_BFS_Hanoi_03 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 314, in test14_BFS_Hanoi_03
+    [23, ((1, 4, 5), (), (2, 3))],
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 52, in runPlayXSteps
+    results = self.pool.apply_async(self.playXSteps, [solver, plays]).get(timeout)
+  File "C:\Program Files\Python37\lib\multiprocessing\pool.py", line 683, in get
+    raise self._value
+  File "C:\Program Files\Python37\lib\multiprocessing\pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 27, in playXSteps
+    solver.solveOneStep()
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 149, in solveOneStep
+    result = self.solveOneStep_helper(game_depth)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 99, in solveOneStep_helper
+    return self.solveOneStep_helper(depth)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 110, in solveOneStep_helper
+    return self.solveOneStep_helper(depth)
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_uninformed_solvers.py", line 82, in solveOneStep_helper
+    new = self.gm.getGameState()
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\student_code_game_masters.py", line 43, in getGameState
+    smaller = int(b['?peg'][3])-1
+ValueError: invalid literal for int() with base 10: 'k'
+
+-------------------------------
+TESTS FAILED  
+test07_GM_8Puzzle_03 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "C:\Users\kille\academics\automatedgradingapp\app\testing\uninformed-solvers\gradingtests.py", line 175, in test07_GM_8Puzzle_03
+    self.assertEqual(p8.getGameState(), ((5,1,4), (6,-1,8), (7,3,2)))
+AssertionError: Tuples differ: ((5, 4, -1), (6, 1, 8), (7, 3, 2)) != ((5, 1, 4), (6, -1, 8), (7, 3, 2))
+
+First differing element 0:
+(5, 4, -1)
+(5, 1, 4)
+
+- ((5, 4, -1), (6, 1, 8), (7, 3, 2))
+?       ----
+
++ ((5, 1, 4), (6, -1, 8), (7, 3, 2))
+?      +++        +
+
+
+-------------------------------
+TESTS SKIPPED 
+-------------------------------
